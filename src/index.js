@@ -2,6 +2,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+ import
+'bootstrap-css-only/css/bootstrap.min.css';
+ import
+'mdbreact/dist/css/mdb.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import{
 	BrowserRouter as Router,
@@ -24,6 +28,8 @@ import Doctor from './component/Doctor/Doctor'
 import Treatments from './component/Treatments/Treatments' 
 import Home from './component/Home/Home' 
 import ContactUs from './component/ContactUs/ContactUs' 
+import Appointment from './component/Appointment/Appointment' 
+
 
 
 
@@ -63,12 +69,7 @@ class Index extends React.Component{
 					<div>
 						  <Navbar bg="dark" variant="dark">
 						    <Navbar.Brand href="#home">
-						      <img
-						        alt="logo"
-						        src="logoo.jpeg"
-						        width="30"
-						        height="30"
-						      />{' '}
+						      {' '}
 						      BG DENTAL CLINIC
 						    </Navbar.Brand>
 						    <Nav variant="pills">
@@ -93,13 +94,13 @@ class Index extends React.Component{
 						   <Nav.Item>
 						    <Nav.Link as={Link} to="/contactus">ContactUs</Nav.Link>
 						  </Nav.Item>
+						  <Nav.Item>
+						    <Nav.Link as={Link} to="/appointment">Appointment</Nav.Link>
+						  </Nav.Item>
 						 
 						  
   						</Nav>
-  						<Form inline>
-    						<FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-    							<Button type="submit">Submit</Button>
-  						</Form>
+  						
 						 </Navbar>
 
 					</div>
@@ -110,20 +111,14 @@ class Index extends React.Component{
 						</Route>
 
 						<Route path="/home" component={Home}/>
-					</Switch>
-
-					<Switch>
+					
 
 						<Route exact path="/login">
 							< Login/>
 						</Route>
 
 						<Route path="/login" component={Login}/>
-					</Switch>
-
-
-
-					<Switch>
+					
 
 						<Route exact path="/registration">
 
@@ -132,9 +127,7 @@ class Index extends React.Component{
 						</Route>
 						<Route path="/registration" component={Registration}/>
 
-					</Switch>
-
-					<Switch>
+					
 
 						<Route exact path="/aboutus">
 
@@ -143,9 +136,7 @@ class Index extends React.Component{
 						</Route>
 						<Route path="/aboutus" component={AboutUs}/>
 
-					</Switch>
-					<Switch>
-
+					
 						<Route exact path="/doctor">
 
 							< Doctor/>
@@ -153,8 +144,6 @@ class Index extends React.Component{
 						</Route>
 						<Route path="/doctor" component={Doctor}/>
 
-					</Switch>
-					<Switch>
 
 						<Route exact path="/treatment">
 
@@ -163,8 +152,6 @@ class Index extends React.Component{
 						</Route>
 						<Route path="/treatment" component={Treatments}/>
 
-					</Switch>
-					<Switch>
 
 						<Route exact path="/contactus">
 
@@ -172,6 +159,15 @@ class Index extends React.Component{
 
 						</Route>
 						<Route path="/contactus" component={ContactUs}/>
+
+					
+
+						<Route exact path="/appointment">
+
+							< Appointment/>
+
+						</Route>
+						<Route path="/appointment" component={Appointment}/>
 
 					</Switch>
 

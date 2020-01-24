@@ -1,114 +1,81 @@
-import React from 'react'
-import Axios from 'axios'
-import {Redirect} from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask, MDBRow, MDBCol, MDBIcon,
+  MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBFormInline,MDBFileInput } from "mdbreact";
+import "./Home.css";
 import{
 
-	Form,Button,Col,Row
+  Button
 
 } from 'react-bootstrap'
+class Registration extends Component {
+  
+
+  render() {
+   
+    return (
+     
+      <div id="classicformpage">
+        
+
+        <MDBView>
+        
+          <MDBMask className="d-flex justify-content-center align-items-center gradient">
+            <MDBContainer style={{marginTop: 'auto',marginButtom:'auto'}}>
+              <MDBRow >
+                <MDBCol md="8" xl="5" className="mb-6">
+                  <MDBCard id="classic-card">
+
+                    <MDBCardBody className="z-depth-2 white-text">
+                      <h3 className="text-center">
+                        <MDBIcon icon="user" /> Register
+                      </h3>
+                      <hr className="hr-light" />
+                      <MDBInput label="Your Fullname"  />
+                      <MDBInput label="Your Address"  />
+                      <MDBInput label="Your Phone"  />
+                      <MDBInput label="Your DOB"  />
+                      <MDBInput label="Your Email"  />
+                      <MDBInput  type="file"/>
 
 
+                      <MDBInput
+                        label="Your password"
+                        type="password"
+                      />
 
-class Registration extends React.Component{
-	constructor(){
-			super()
-			this.state={
-				username:'',
-				password:'',
-				validationMessage:'',
-				redirect:false
-			}
-	}
-	usernameChangeHandler= (event) => {
-
-		// this.setState({username:event.target.value})
-
-		if (event.target.value.length<6){
-			this.setState({validationMessage:'username should require more than 6 charecter'})
-		}
-		this.setState({username:event.target.value})
-
-	}
-
-	passwordChangeHandler= (event) => {
-		this.setState({password:event.target.value})
-
-	}
-	formsubmitHandler= (e) => {
-		e.preventDefault()
-		// console.log(this.state)
-		var headers={
-			'Content-Type':'application/json'
-
-		}
-		var data ={
-			username:this.state.username,
-			password:this.state.password
-		}
-
-		//1st url, 2 data js obj, 3 header js obj
-		Axios.post('http://localhost:3002/registration', data,headers)
-		.then((response) => {
-
-			console.log(response);
-
-			if(response.status === 200){
-				this.setState({redirect:true})
-			}
-
-		})
-		.catch((err) => {
-
-		})
-
-		//call api to post data use Axiospacjage which is external
-	}
+                      <div className="text-center mt-4 black-text">
+                        <Button color="indigo">Sign Up</Button>
+                        <Button color="indigo">Login</Button>
 
 
-	render(){
+                        <hr className="hr-light" />
+                        <div className="text-center d-flex justify-content-center white-label">
+                          <a href="#!" className="p-2 m-2">
+                            <MDBIcon fab icon="twitter" className="white-text" />
+                          </a>
+                          <a href="#!" className="p-2 m-2">
+                            <MDBIcon fab icon="linkedin-in" className="white-text" />
+                          </a>
+                          <a href="#!" className="p-2 m-2">
+                            <MDBIcon fab icon="instagram" className="white-text" />
+                          </a>
+                        </div>
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+            </MDBMask>
+         
+          
+        </MDBView>
 
-		// what to render based on state
-		console.log(this.state.redirect)
-		if(this.state.redirect){
-
-			return (
-
-				<Redirect to='/login' />
-
-				)
-
-			console.log('asdasdas')
-		}
-
-		return(
-
-
-					<Form onSubmit={this.formsubmitHandler}>
-					  <Form.Row>
-					    <Form.Group as={Col} controlId="formGridEmail">
-					      <Form.Label>Email</Form.Label> 
-					      <Form.Control type="email" placeholder="Enter email"  value={this.state.username} onChange={this.usernameChangeHandler}/>
-					      <Form.Text className="text-muted">
-					      {this.state.validationMessage}
-					    </Form.Text>
-					    </Form.Group>
-
-					    <Form.Group as={Col} controlId="formGridPassword">
-					      <Form.Label>Password</Form.Label>
-					      <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.passwordChangeHandler} />
-					    </Form.Group>
-					  </Form.Row>
-
-					 
-
-					  <Button variant="primary" type="submit">
-					    Submit
-					  </Button>
-					  
-					</Form>
-
-			)
-
-	}
+      </div>
+           
+    );
+  }
 }
-export default Registration
+
+export default Registration;

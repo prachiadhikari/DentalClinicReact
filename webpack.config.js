@@ -38,7 +38,38 @@ module:{
 				test:/\.css$/,
 				//exclude:/node_modules/,
 				use:['style-loader','css-loader']//to convert css to js
-			}
+			},
+			{
+				test: /\.(png|jpe?g|gif|svg)$/,
+        		use: [
+         				 {
+           					 loader: 'file-loader',
+           					 options: {
+          								name: '[path][name].[ext]',
+       								 },
+          				}
+        			]
+ 
+			},
+			{
+         test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
+        ]
+      },
+
+      {
+         test: /\.(csv|tsv)$/,
+         use: [
+           'csv-loader',
+         ],
+       },
+       {
+         test: /\.xml$/,
+         use: [
+           'xml-loader',
+         ],
+       }
 
 	]
 },
@@ -54,6 +85,7 @@ devServer:
 	hot:true,
 	//hotOnly:true,
 	//to serve webpack files
+	historyApiFallback:true,
 	publicPath:"http://localhost:3000/dist/"
 
 }
