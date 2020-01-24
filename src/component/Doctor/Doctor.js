@@ -12,26 +12,24 @@ const Doctor = () => {
             <MDBView hover className="rounded z-depth-2 mb-4" waves>
               <img
                 className="img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg"
+                src="https://previews.123rf.com/images/puhhha/puhhha1510/puhhha151000577/45743843-dentist-doctor-portrait-young-man-at-his-workplace-dental-clinic.jpg"
                 alt=""
               />
               <MDBMask overlay="white-slight" />
             </MDBView>
             
             <h4 className="font-weight-bold mb-3">
-              <strong>DOCTOR NAME</strong>
+              <strong>John  Cronin</strong>
             </h4>
+           
             <p className="dark-grey-text">
-              Name
+              Qualification: MD,MDS
             </p>
             <p className="dark-grey-text">
-              Qualification
+              Type: Doctors
             </p>
             <p className="dark-grey-text">
-              Type
-            </p>
-            <p className="dark-grey-text">
-              NMC No
+              NMC No: 1231231
             </p>
             <MDBBtn color="info" rounded size="md">
               Read more
@@ -41,26 +39,24 @@ const Doctor = () => {
             <MDBView hover className="rounded z-depth-2 mb-4" waves>
               <img
                 className="img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg"
+                src="https://static3.bigstockphoto.com/0/0/3/large1500/300426055.jpg"
                 alt=""
               />
               <MDBMask overlay="white-slight" />
             </MDBView>
             
             <h4 className="font-weight-bold mb-3">
-              <strong>DOCTOR NAME</strong>
+              <strong>Daisy Jonas</strong>
             </h4>
+            
             <p className="dark-grey-text">
-              Name
+              Qualification: MD,MBBS
             </p>
             <p className="dark-grey-text">
-              Qualification
+              Type: Doctor
             </p>
             <p className="dark-grey-text">
-              Type
-            </p>
-            <p className="dark-grey-text">
-              NMC No
+              NMC No: 98877676
             </p>
             <MDBBtn color="info" rounded size="md">
               Read more
@@ -70,26 +66,23 @@ const Doctor = () => {
             <MDBView hover className="rounded z-depth-2 mb-4" waves>
               <img
                 className="img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg"
+                src="https://i.ytimg.com/vi/WK_5J3JZQpw/maxresdefault.jpg"
                 alt=""
               />
               <MDBMask overlay="white-slight" />
             </MDBView>
             
             <h4 className="font-weight-bold mb-3">
-              <strong>DOCTOR NAME</strong>
+              <strong>Naresh-Trehan</strong>
             </h4>
             <p className="dark-grey-text">
-              Name
+              Qualification: MDS
             </p>
             <p className="dark-grey-text">
-              Qualification
+              Type: Doctor
             </p>
             <p className="dark-grey-text">
-              Type
-            </p>
-            <p className="dark-grey-text">
-              NMC No
+              NMC No: 35634
             </p>
             <MDBBtn color="info" rounded size="md">
               Read more
